@@ -1,0 +1,120 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #1A1A1A;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.visible{
+    opacity: 1;
+    visibility: hidden;
+}
+
+.wrapper{
+    max-width: 1470px;
+    padding: 0 20px;
+    width: 100%;
+    margin: auto;
+    background-color: #1A1A1A;
+}
+
+header{
+    height: 74px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    min-height: 74px;
+}
+
+header .svg{
+    fill: #333333;
+    cursor: pointer;
+}
+
+header .svg.active,
+header .svg:hover{
+    fill: #03A9F4;
+}
+
+
+header .wrapper > div{
+    display: flex;
+}
+
+header span{
+    margin-right: 30px;
+    font-size: 0.5625rem;
+    color: #4F4F4F;
+    text-transform: uppercase;
+}
+
+header .fullscreen{
+    width: 13px;
+    height: 13px;
+}
+header .view-1{
+    height: 10px;
+    margin-right: 10px;
+}
+header .view-2{
+    height: 10px;
+}
+
+.main{
+    padding-top: 74px;
+}
+
+.main .item{
+    position: relative;
+}
+
+.main .item img{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.main .item p{
+    position: absolute;
+    bottom: 0;
+    color: #FFFFFF;
+    font-size: 0.5625rem;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    padding: 27px;
+}
+
+.main .item:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 148px;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.main .item:hover:after,
+.main .item:hover p{
+    opacity: 1;
+    visibility: visible;
+}
