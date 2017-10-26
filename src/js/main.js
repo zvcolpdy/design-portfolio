@@ -1,9 +1,20 @@
 import fullscreen from 'fullscreen'
 
+let body = document.getElementsByTagName('html')[0];
 
 let addFullScreenListener = (item) => {
+	let fullScr = fullscreen(item);
+	let bodyReleaseListener = () => {
+		fullScr.release()
+	}
+
 	item.addEventListener('click', () => {
-  	fullscreen(item).request();
+  	fullScr.request();
+  	body.addEventListener('click',bodyReleaseListener)
+	})
+
+	fullScr.on('release', function() {
+  	body.removeEventListener('click',bodyReleaseListener)
 	})
 }
 
