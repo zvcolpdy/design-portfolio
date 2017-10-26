@@ -1,11 +1,15 @@
-// inlineSVG.init({
-//   svgSelector: 'img.svg', // the class attached to all images that should be inlined
-//   initClass: 'js-inlinesvg', // class added to <html>
-// }, function () {
-//   console.log('All SVGs inlined!!');
-// });
+import fullscreen from 'fullscreen'
 
-let a = {'1': 123123}
-// console.log(Object.values(a))
-const bs = ()=>{}
-console.log({...a})
+
+let addFullScreenListener = (item) => {
+	item.addEventListener('click', () => {
+  	fullscreen(item).request();
+	})
+}
+
+let wrapper = document.getElementById('wrapper-main').childNodes;
+wrapper = [].slice.call(wrapper);
+
+wrapper.forEach((el) => {
+	el.className === "item" ? addFullScreenListener(el) : null
+})
