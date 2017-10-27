@@ -8,3 +8,12 @@ fullScrBtn.addEventListener('click', () => {
 })
 
 
+let homeButton = document.getElementById('homeButton');
+homeButton.addEventListener('click', () => {
+	window.location.pathname = "/index.html";
+})
+
+let aboutButton = document.getElementById('aboutButton');
+aboutButton.addEventListener('click', () => {
+	window.location.pathname = "/about.html";
+})

@@ -1,3 +1,5 @@
+@import "animations.less";
+
 body{
     padding: 0;
     margin: 0;
@@ -53,6 +55,9 @@ header .svg{
     fill: #03A9F4;
 }
 
+.fullscreen{
+    fill: #03A9F4;
+}
 
 header .wrapper > div{
     display: flex;
@@ -131,11 +136,16 @@ footer{
     padding: 5px;
     background-color: #131313;
     color:#606060;
+    position:fixed;
+    bottom:0;
 }
 
 .wrapper-footer:extend(.wrapper){
     background-color: #131313;
     height:100%;
+    @media (max-width : 480px){
+        padding:0;
+    }
 }
 
 
@@ -154,7 +164,7 @@ footer{
     width:190px;
     & > div{
         font-size: 15px;
-        width:160px; 
+        width:145px; 
     }
 }
 
@@ -183,12 +193,18 @@ footer{
         color:white;
         border-color:white;
     }
+    @media (max-width : 580px){
+        display:none;
+    }
 }
 
 .social-icons{
     width:105px;
     display:flex;
     justify-content:space-between;
+    @media (max-width : 480px){
+        width:80px;
+    }
 }
 
 .svg-social{
@@ -196,5 +212,27 @@ footer{
     cursor:pointer;
     &:hover{
         fill:white;
+    }
+}
+
+.email{
+    @media (max-width : 800px){
+        display:none;
+    }
+}
+
+.about-container{
+    width:450px;
+    height:auto;
+    margin:auto;
+    margin-top:200px;
+    font-family: Roboto;
+    color:#DBDBDB;
+    & > p{
+        line-height:normal;
+        font-size:12px;
+    }
+    @media (max-width : 500px){
+        width:310px;
     }
 }
