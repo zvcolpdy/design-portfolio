@@ -48,8 +48,8 @@ header .svg{
     cursor: pointer;
 }
 
-header .svg.active,
-header .svg:hover{
+.svg.active,
+.svg:hover{
     fill: #03A9F4;
 }
 
@@ -119,6 +119,82 @@ header .view-2{
     visibility: visible;
 }
 
-.svg, .item{
+.svg{
     cursor:pointer;
+}
+
+footer{
+    font-family:Roboto;
+    width:100%;
+    height:70px;
+    line-height:18px;
+    padding: 5px;
+    background-color: #131313;
+    color:#606060;
+}
+
+.wrapper-footer:extend(.wrapper){
+    background-color: #131313;
+    height:100%;
+}
+
+
+.footer-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    height:100%;
+}
+
+.name-container{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    width:190px;
+    & > div{
+        font-size: 15px;
+        width:160px; 
+    }
+}
+
+.hovered{
+    color:white;
+}
+
+.footer-text{
+    font-size:12px;
+    &:hover{
+        color:white;
+        cursor:pointer;
+    }
+}
+
+.contact-button{
+    background: none;
+    outline:none;
+    cursor:pointer;
+    color:#606060;
+    border:1px #606060 solid;
+    font-size:12px;
+    padding:8px 25px;
+    border-radius:15px;
+    &:hover{
+        color:white;
+        border-color:white;
+    }
+}
+
+.social-icons{
+    width:105px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.svg-social{
+    fill: #606060;
+    cursor:pointer;
+    &:hover{
+        fill:white;
+    }
 }
