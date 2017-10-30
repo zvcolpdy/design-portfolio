@@ -12,6 +12,8 @@
 </head>
 <body>
 
+    <div class="pseudo-footer"></div>
+
     <header>
         <div class="wrapper">
             <div>
@@ -20,13 +22,13 @@
             </div>
             <div id="fullscreen">
                 <span>fullscreen</span>
-                <img class="svg fullscreen" src="img/fullscreen.svg">
+                <img class="svg" src="img/fullscreen.svg">
             </div>
         </div>
     </header>
 
     <div class="main" id="main">
-        <div class="wrapper tileContainer" id="main-wrapper">
+        <div class="wrapper tile-container" id="main-wrapper">
             <div class="item">
                 <img src="img/img-1.png" alt="">
                 <p>Entering Cherkassy | Personal Project</p>
@@ -53,28 +55,32 @@
 
     <footer>
         <div class="wrapper-footer">
-            <div class="footer-content">
+            <div class="footer-content-left">
                 <div class="name-container">
                     <img class="svg active" src="img/logo.svg" alt="">
                     <div>
-                        <span class="hovered">OLEKSIY RUSYUK</span>
-                        <span>CONCEPT DESIGNER</span>
+                        <span>Oleksiy Rusyuk</span><br />
+                        <span>Concept designer</span>
                     </div>
                 </div>
                 <img class="svg active" src="img/arrow-down.svg" alt="">
-                <p class="footer-text" id="homeButton">Home</p>
-                <p class="footer-text" id="aboutButton">About</p>
-                <p class="footer-text email">mr.me.alexey@gmail.com</p>
+                <a id="homeButton">Home</a>
+                <a id="aboutButton">About</a>
+                <a class="email">mr.me.alexey@gmail.com</a>
+            </div>
+            <div class="footer-content-right">
                 <input class="contact-button" type="button" value="message me"/>
                 <div class="social-icons">
-                    <img class="svg-social" src="img/inst.svg" alt="">
-                    <img class="svg-social" src="img/linin.svg" alt="">
-                    <img class="svg-social" src="img/fb.svg" alt="">
-                    <img class="svg-social" src="img/email.svg" alt="">
+                    <img src="img/inst.svg" alt="">
+                    <img src="img/linin.svg" alt="">
+                    <img src="img/fb.svg" alt="">
+                    <img src="img/email.svg" alt="">
                 </div>
             </div>
         </div>
     </footer>
+
+    <div class="pseudo-footer"></div>
 
     <script src="js/bundle.js"></script>
 

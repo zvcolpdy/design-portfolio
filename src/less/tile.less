@@ -1,11 +1,11 @@
+
 .tile{
-	width:33%;
+	width:33.33%;
 	overflow:hidden;
 	height:350px;
 	min-width:350px;
-	border-color:transparent;
-	border-style: solid;
-	border-width:15px;
+	border-right: 20px solid transparent;
+	border-bottom: 25px solid transparent;
 	& > p{
 		position:relative;
 		bottom:280px;
@@ -15,8 +15,9 @@
 
 }
 
-.tileContainer{
+.tile-container{
 	display:flex;
 	flex-flow:row wrap;
 	justify-content:center;
+	padding:0;
 }
