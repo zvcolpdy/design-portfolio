@@ -1,4 +1,5 @@
 @import "tile.less";
+@import "slider.less";
 
 @gray:#606060;
 @darkgray:#131313;
@@ -130,19 +131,17 @@ footer{
     position:fixed;
     bottom:0;
     z-index:1000;
+    .wrapper{
+        background-color: @darkgray;
+        height:100%;
+        @media (max-width :@medium){
+            padding:0 5px;
+        }
+    }
 }
 .pseudo-footer{
     height:70px;
 }
-
-.wrapper-footer:extend(.wrapper){
-    background-color: @darkgray;
-    height:100%;
-    @media (max-width :@medium){
-        padding:0 5px;
-    }
-}
-
 
 .footer-content-left{
     display:flex;
@@ -252,5 +251,26 @@ footer{
     & > p{
         line-height:normal;
         font-size:0.75rem;
+    }
+}
+
+.hidden-on-small{
+    @media (max-width:@small){
+        display: none !important;
+    }
+}
+.hidden-on-medium{
+    @media (max-width:@medium){
+        display: none !important;
+    }
+}
+.hidden-on-large{
+    @media (max-width:@large){
+        display: none !important;
+    }
+}
+.hidden-on-xlarge{
+    @media (max-width:@xlarge){
+        display: none !important;
     }
 }
