@@ -31,6 +31,8 @@ _.toTileButton.addEventListener('click', () => {
 		el.className = 'tile'
 	})
 	_.fullScrBtn.classList.add("hidden-on-medium");
+	_.rowStuff.style.display = "none";
+	_.tileStuff.style.display = "flex";
 })
 
 //row view
@@ -41,6 +43,8 @@ _.toRowButton.addEventListener('click', () => {
 		el.className = 'item'
 	})
 	_.fullScrBtn.classList.remove("hidden-on-medium");
+	_.tileStuff.style.display = "none";
+	_.rowStuff.style.display = "block";
 })
 
 

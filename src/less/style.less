@@ -1,13 +1,7 @@
 @import "tile.less";
-@import "slider.less";
 
 @gray:#606060;
 @darkgray:#131313;
-
-@small:480px;
-@medium:768px;
-@large:1024px;
-@xlarge:1480px;
 
 body{
     padding: 0;
@@ -36,6 +30,13 @@ body{
     width: 100%;
     margin: auto;
     background-color: #1A1A1A;
+    .turn-phone{
+        color:#828282;
+        font-size:0.6875rem;
+    }
+    .tile-stuff{
+        display: none;
+    }
 }
 
 header{
@@ -62,7 +63,7 @@ header{
     span{
         margin-right: 30px;
         font-size: 0.5625rem;
-        color: #4F4F4F;
+        color: @gray;
         text-transform: uppercase;
     }
     .fullscreen{
@@ -134,7 +135,7 @@ footer{
     .wrapper{
         background-color: @darkgray;
         height:100%;
-        @media (max-width :@medium){
+        @media (max-width :768px){
             padding:0 5px;
         }
     }
@@ -150,7 +151,7 @@ footer{
     justify-content: flex-start;
     height:100%;
     & > svg{
-        @media (max-width:@medium){
+        @media (max-width:768px){
             display:none;
         }
     }
@@ -249,28 +250,14 @@ footer{
     padding:0 25px;
     color:#DBDBDB;
     & > p{
-        line-height:normal;
+    line-height:normal;
         font-size:0.75rem;
     }
 }
 
-.hidden-on-small{
-    @media (max-width:@small){
-        display: none !important;
-    }
-}
 .hidden-on-medium{
-    @media (max-width:@medium){
-        display: none !important;
+    @media (max-width:1024px){
+        display:none !important;
     }
 }
-.hidden-on-large{
-    @media (max-width:@large){
-        display: none !important;
-    }
-}
-.hidden-on-xlarge{
-    @media (max-width:@xlarge){
-        display: none !important;
-    }
-}
+

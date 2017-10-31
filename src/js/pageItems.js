@@ -14,6 +14,8 @@ items.polkaRapper = getEl('main-wrapper');
 items.items = [].slice.call(items.polkaRapper.childNodes).filter(el => el.tagName === 'DIV');
 items.main = getEl('main');
 items.about = getEl('about-container');
+items.rowStuff = getEl('row-stuff');
+items.tileStuff = getEl('tile-stuff');
 
 
 

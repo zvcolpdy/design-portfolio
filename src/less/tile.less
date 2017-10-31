@@ -13,7 +13,7 @@
 	p{
 		position:relative;
 		bottom:-5px;
-		color:#4F4F4F;
+		color:@gray;
 		font-size:0.6875rem;
 	}
 	img{
@@ -27,3 +27,44 @@
 	justify-content:center;
 	padding:0;
 }
+
+.tile-stuff{
+	width:100%;
+	padding: 0 0 0 10px;
+	font-size:0.6875rem;
+	justify-content: space-around;
+	color:@gray;
+	text-transform: uppercase;
+}
+.turn-phone{
+		color:#828282;
+		font-size:0.6875rem;
+		text-transform:uppercase;
+		margin:auto;
+		@media (min-width: 768px){
+			display:none !important;
+		}
+}
+
+.slider-nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width:120px;
+	font-size:0.5625rem;
+	& > div{
+		display:flex;
+		align-items: center;
+		cursor:pointer;
+		&:hover{
+			color:white;
+		}
+	}
+	svg{
+		border-width:0 5px;
+		border-style: solid;
+		border-color: transparent;
+		box-sizing:content-box;
+	}
+}
+
