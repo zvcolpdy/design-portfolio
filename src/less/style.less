@@ -4,13 +4,16 @@
 @darkgray:#131313;
 
 body{
-    padding: 0;
+    padding: 70px 0;
     margin: 0;
     background-color: #1A1A1A;
     font-size: 16px;
     line-height: 1.4;
     font-family: 'Roboto', sans-serif;
     overflow-y: scroll;
+    min-height:100vh;
+    display: flex;
+    flex-direction:column;
 }
 
 *{
@@ -40,7 +43,7 @@ body{
 }
 
 header{
-    height: 74px;
+    height: 70px;
     position: fixed;
     top: 0;
     left: 0;
@@ -82,7 +85,7 @@ header{
 .main {
     .item{
         position: relative;
-        & > img{
+        img{
             width: 100%;
             vertical-align: bottom;
         }
@@ -114,6 +117,10 @@ header{
             }
         }
     }
+    .wrapper{
+        padding: 0; 
+        max-width: 1430px;
+    }
 }
 
 .svg{
@@ -135,9 +142,11 @@ footer{
     .wrapper{
         background-color: @darkgray;
         height:100%;
-        @media (max-width :768px){
-            padding:0 5px;
-        }
+    }
+}
+.wrapper{
+    @media (max-width :768px){
+        padding:0 5px;
     }
 }
 .pseudo-footer{
@@ -171,6 +180,11 @@ footer{
             color:white;
             cursor:pointer;
         }
+        &:last-child{
+            @media (max-width : 840px){
+                display:none;
+            }
+        }
     }
 }
 
@@ -195,12 +209,12 @@ footer{
     & > div{
         font-size: 0.85rem;
         margin-left: 12px;
+        div:first-child{
+            color:white;
+        }
     }
     span{
         text-transform: uppercase;
-        &:first-child{
-            color:white;
-        }
     }
 }
 
@@ -236,16 +250,9 @@ footer{
     }
 }
 
-.email{
-    @media (max-width : 840px){
-        display:none;
-    }
-}
-
 #about-container{
     display:none;
-    width:450px;
-    max-width: 100%;
+    max-width: 450px;
     margin:auto;
     padding:0 25px;
     color:#DBDBDB;

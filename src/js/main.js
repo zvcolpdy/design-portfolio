@@ -1,10 +1,6 @@
 import _ from './pageItems'
 import fullscreen from 'fullscreen'
 
-//deleting white space after tile view if fullscreen is turned on
-window.onload = () => {
-	_.body.style.minHeight = `${window.screen.availHeight}px`
-}
 
 //providing fullscreen
 _.fullScrBtn.addEventListener('click', () => {
