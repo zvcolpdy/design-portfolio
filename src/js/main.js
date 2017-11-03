@@ -1,51 +1,21 @@
-import _ from './pageItems'
-import fullscreen from 'fullscreen'
+import './header'
+import './footer'
+import './slider'
+import page from "./pageItems"
+import {put} from "./slider"
 
+let putToSlider = (e) => {
+	if(e.target.parentNode.parentNode.className == "tile"){
+		put(e.target.parentNode.parentNode);
+		page.slider.style.display = "flex";
+		scrollToTop();
+	}
+}
 
-//providing fullscreen
-_.fullScrBtn.addEventListener('click', () => {
-	fullscreen(_.html).request();
-})
+let scrollToTop = () => {
+		let stop  = setInterval(() => {
+			page.html.scrollTop == 0 ? clearInterval(stop) : page.html.scrollTop -= 35;
+		},10)
+}
 
-//home page
-_.homeButton.addEventListener('click', () => {
-	_.main.style.display = "block";
-	_.about.style.display = "none";
-})
-
-//about page
-_.aboutButton.addEventListener('click', () => {
-	_.main.style.display = "none";
-	_.about.style.display = "block";
-})
-
-//tile view
-_.toTileButton.addEventListener('click', () => {
-	_.toTileButton.classList.add("active");
-	_.toRowButton.classList.remove("active");
-	_.items.forEach((el) => {
-		el.className = 'tile'
-	})
-	_.fullScrBtn.classList.add("hidden-on-medium");
-	_.rowStuff.style.display = "none";
-	_.tileStuff.style.display = "flex";
-})
-
-//row view
-_.toRowButton.addEventListener('click', () => {
-	_.toTileButton.classList.remove("active");
-	_.toRowButton.classList.add("active");
-	_.items.forEach((el) => {
-		el.className = 'item'
-	})
-	_.fullScrBtn.classList.remove("hidden-on-medium");
-	_.tileStuff.style.display = "none";
-	_.rowStuff.style.display = "block";
-})
-
-
-
-
-
-
-
+page.main.addEventListener('click',putToSlider);

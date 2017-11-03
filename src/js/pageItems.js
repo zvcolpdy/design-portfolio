@@ -16,7 +16,10 @@ items.main = getEl('main');
 items.about = getEl('about-container');
 items.rowStuff = getEl('row-stuff');
 items.tileStuff = getEl('tile-stuff');
-
+items.sliderPrev = document.getElementsByClassName("sliderPrev");
+items.sliderNext = document.getElementsByClassName("sliderNext");
+items.sliderContent = getEl("slider-content"); 
+items.slider = getEl("slider"); 
 
 
 export default items;
