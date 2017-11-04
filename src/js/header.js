@@ -11,6 +11,7 @@ page.fullScrBtn.addEventListener('click', () => {
 page.toTileButton.addEventListener('click', () => {
 	page.toTileButton.classList.add("active");
 	page.toRowButton.classList.remove("active");
+	page.backToGalleryViewButton.style.display = "none";
 	page.items.forEach((el) => {
 		el.className = 'tile';
 	})

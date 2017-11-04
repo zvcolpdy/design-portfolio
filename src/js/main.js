@@ -19,3 +19,9 @@ let scrollToTop = () => {
 }
 
 page.main.addEventListener('click',putToSlider);
+
+page.fullResButtons.forEach((item) => {
+	item.addEventListener('click',() => {
+		item.parentNode.children[0].children[0].classList.add("fullRes");
+	});
+})

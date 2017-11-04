@@ -1,6 +1,6 @@
 
 .tile{
-	width:~"calc(100%/3 - 13.3333px)";
+	width: ~"calc(100%/3 - 13.3333px)";
 	height:350px;
 	border-bottom: 25px solid transparent;
 	div{
@@ -25,6 +25,9 @@
 			transition:transform 1.8s;
 		}
 	}
+	.fullResButton{
+		display: none;
+	}
 	@media (max-width:1024px){
 		width:~"calc(100%/2 - 16.6666667px)";
 	}
@@ -41,7 +44,7 @@
 	padding:0;
 }
 
-.tile-stuff{
+#tile-stuff{
 	width:100%;
 	padding: 0 0 0 10px;
 	font-size:0.6875rem;
@@ -119,6 +122,9 @@
 				padding-left:5px;
 			}
 		}
+	}
+	.fullResButton{
+		display:none;
 	}
 }
 

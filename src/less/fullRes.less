@@ -1,0 +1,39 @@
+#gallery-back-button{
+	cursor:pointer;
+	display:none;
+	svg{
+		border-right:10px transparent solid;
+		box-sizing:content-box;
+		&:hover{
+			fill:red;
+		}
+	}
+	span{
+		color:white;
+	}
+	@media (max-width:1440px){
+		display:none !important;
+	}
+}
+
+.fullResButton{
+	right:0;
+	text-transform:uppercase;
+	@media (max-width:1440px){
+		display:none !important;
+	}
+	&:hover{
+		color:#03A9F4 !important;
+		cursor:pointer;
+		transform:scale(1.18);
+		transition:transform 1.5s;
+	}
+}
+
+.fullRes{
+	position:absolute;
+	z-index:999;
+	top:60px;
+	width:auto !important;
+	height:auto !important;
+}

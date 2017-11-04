@@ -11,3 +11,7 @@ page.aboutButton.addEventListener('click', () => {
 	page.main.style.display = "none";
 	page.about.style.display = "block";
 })
+
+page.hideFooter.addEventListener('click', () => {
+	page.footer.style.display = "none";
+})
