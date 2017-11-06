@@ -36,7 +36,7 @@ let fullResView = (e) => {
 //creating a container for high resolution view and appending it to the body
 let createHighResContainer = (item) => {
 	let container = document.createElement('div');
-	container.className = "fullRes";
+	container.id = "fullRes";
 	makeDraggable(item);
 	container.appendChild(item);
 	page.body.appendChild(container);
@@ -48,11 +48,6 @@ let createHighResContainer = (item) => {
 page.main.addEventListener('click',putToSlider);
 page.main.addEventListener('click',fullResView);
 
-
-/*setTimeout(function() {
-	page.polkaRapper.appendChild(document.getElementById("test").cloneNode(true))
-	refreshItems();
-}, 2000);*/
 
 function makeDraggable(item){
 	item.onmousedown = (e) => {

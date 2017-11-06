@@ -4,16 +4,18 @@ import fullscreen from 'fullscreen'
 //providing fullscreen
 page.fullScrBtn.addEventListener('click', () => {
 	fullscreen(page.html).request();
-	page.fullScrBtn.children[1].classList.add("active")
+	page.fullScrBtn.children[1].classList.add("active");
 })
 
 //tile view
 page.toTileButton.addEventListener('click', () => {
 	page.toTileButton.classList.add("active");
 	page.toRowButton.classList.remove("active");
+	page.backToGalleryViewButton.style.display = "none";
 	page.items.forEach((el) => {
 		el.className = 'tile';
 	})
+	page.body.removeChild(document.getElementById('fullRes'));
 	page.fullScrBtn.classList.add("hidden-on-medium");
 	page.rowStuff.style.display = "none";
 	page.tileStuff.style.display = "flex";

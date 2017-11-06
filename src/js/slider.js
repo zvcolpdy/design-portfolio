@@ -1,6 +1,5 @@
 import page from "./pageItems"
 
-//слава украине
 let slider = {
 	items:page.items,
 	currentItem:0
