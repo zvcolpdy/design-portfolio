@@ -1,16 +1,19 @@
 @import "tile.less";
+@import "fullRes.less";
 
 @gray:#606060;
 @darkgray:#131313;
+@lightgray:#1A1A1A;
 
 body{
-    padding: 70px 0;
+    padding: 60px 0;
     margin: 0;
-    background-color: #1A1A1A;
+    background-color: @lightgray;
     font-size: 16px;
     line-height: 1.4;
     font-family: 'Roboto', sans-serif;
     overflow-y: scroll;
+    overflow-x: hidden;
     min-height:100vh;
     display: flex;
     flex-direction:column;
@@ -32,7 +35,7 @@ body{
     padding: 0 20px;
     width: 100%;
     margin: auto;
-    background-color: #1A1A1A;
+    background-color: @lightgray;
     .turn-phone{
         color:#828282;
         font-size:0.6875rem;
@@ -43,20 +46,24 @@ body{
 }
 
 header{
-    height: 70px;
+    height: 60px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 1001;
+    background-color:@lightgray;
     .wrapper{
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: auto;
-        min-height: 74px;
+        min-height: 60px;
         & > div{
             display: flex;  
+        }
+        .gallery-back-button{
+            display:none;
         }
     }
     .svg{
@@ -132,13 +139,13 @@ header{
 
 footer{
     width:100%;
-    height:70px;
+    height:60px;
     line-height:18px;
     background-color: @darkgray;
     color:@gray;
     position:fixed;
     bottom:0;
-    z-index:1000;
+    z-index:1001;
     .wrapper{
         background-color: @darkgray;
         height:100%;
@@ -252,13 +259,20 @@ footer{
 
 #about-container{
     display:none;
-    max-width: 450px;
-    margin:auto;
-    padding:0 25px;
-    color:#DBDBDB;
-    & > p{
-    line-height:normal;
-        font-size:0.75rem;
+    position:fixed;
+    z-index:1000;
+    background-color:@lightgray;
+    width:100%;
+    height:100%;
+    & > div{
+       max-width: 450px;
+       margin:auto;
+       padding:0 25px;
+       color:#BDBDBD; 
+       p{
+            line-height:normal;
+            font-size:0.75rem;
+        }
     }
 }
 

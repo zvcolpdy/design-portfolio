@@ -12,8 +12,6 @@
 </head>
 <body>
 
-
-
     <header>
         <div class="wrapper">
             <div>
@@ -23,21 +21,25 @@
             <div class="turn-phone" id="row-stuff">
                 Turn phone horisontally for viewing in detail
             </div>
-            <div class = "tile-stuff" id="tile-stuff">
+            <div id="tile-stuff">
                 <div>See thumbnails</div>
                 <div class="turn-phone">
                     Turn phone horisontally for viewing in detail
                 </div> 
                 <div class="slider-nav">
-                    <div class="slider-nav-prev">
+                    <div class="slider-nav-prev sliderPrev">
                         <img src="img/arrow-left.svg" alt="">
                         <div>previous</div>
                     </div>
-                    <div class="slider-nav-next">
+                    <div class="slider-nav-next sliderNext">
                         <div>next</div>
                         <img src="img/arrow-right.svg" alt="">
                     </div>
                 </div>
+            </div>
+            <div id="gallery-back-button">
+                <img src="img/arrow-left.svg">
+                <span>Go to a gallery view</span>
             </div>
             <div id="fullscreen" class="hidden-on-medium">
                 <span>fullscreen</span>
@@ -46,45 +48,66 @@
         </div>
     </header>
 
+    <div id="slider">
+        <img class="sliderPrev" src="img/slider-arrow-left.png" alt="">
+        <div class="wrapper" id="slider-content">
+            <img src="img/img-1.png" alt="">
+        </div>
+        <img class="sliderNext" src="img/slider-arrow-right.png" alt="">
+    </div>
+
     <div class="main" id="main">
         <div class="wrapper tile-container" id="main-wrapper">
             <div class="item">
                 <div>
-                    <img src="img/img-1.png" alt="">
+                    <img src="img/1.png" alt="">
                 </div>
                 <p>Entering Cherkassy | Personal Project</p>
+                <p class="fullResButton">View Highres</p>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="img/2.png" alt="">
+                </div>
+                <p>Entering Cherkassy | Personal Project</p>
+                <p class="fullResButton">View Highres</p>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="img/3.png" alt="">
+                </div>
+                <p>Entering Cherkassy | Personal Project</p>
+                <p class="fullResButton">View Highres</p>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="img/4.jpg" alt="">
+                </div>
+                <p>Entering Cherkassy | Personal Project</p>
+                <p class="fullResButton">View Highres</p>
             </div>
             <div class="item">
                 <div>
                     <img src="img/img-1.png" alt="">
                 </div>
                 <p>Entering Cherkassy | Personal Project</p>
-            </div>
-            <div class="item">
-                <div>
-                    <img src="img/img-1.png" alt="">
-                </div>
-                <p>Entering Cherkassy | Personal Project</p>
-            </div>
-            <div class="item">
-                <div>
-                    <img src="img/img-1.png" alt="">
-                </div>
-                <p>Entering Cherkassy | Personal Project</p>
+                <p class="fullResButton">View Highres</p>
             </div>
         </div>
     </div>
 
     <div id="about-container">
-        <h1>About</h1>
-        <p>I am Oleskiy Rusyuk, a 21 year old Ukrainian concept designer working on various videogame projects since 2014. I`ve created wide range of production art including concept art, matte-paint, promo art and a lot of advertisement materials.<br /><br /> Recent work includes action battle-royale Last Survivor over 40 very small game projects.<br /><br /> In current time i'm working on a rapid skill growth and devoting all my time into expanding my visual library and learning anatomy, mechanics and various useful knowledge.<br /><br /> In my free time I love to increase my efficiency by optimising my workspace and incorporating knowledge from new guides and tutorials from the top names in the industry. My art is hugely driven by the love of game-and-cinema industry. My aim is to acquire most knowledge possible to create completely lifelike solutions to any possible challenge.</p>
+        <div>
+            <h1>About</h1>
+            <p>I am Oleskiy Rusyuk, a 21 year old Ukrainian concept designer working on various videogame projects since 2014. I`ve created wide range of production art including concept art, matte-paint, promo art and a lot of advertisement materials.<br /><br /> Recent work includes action battle-royale Last Survivor over 40 very small game projects.<br /><br /> In current time i'm working on a rapid skill growth and devoting all my time into expanding my visual library and learning anatomy, mechanics and various useful knowledge.<br /><br /> In my free time I love to increase my efficiency by optimising my workspace and incorporating knowledge from new guides and tutorials from the top names in the industry. My art is hugely driven by the love of game-and-cinema industry. My aim is to acquire most knowledge possible to create completely lifelike solutions to any possible challenge.</p>
+        </div>
     </div>
 
     <footer>
         <div class="wrapper">
             <div class="footer-content-left">
                 <div class="name-container">
-                    <img class="svg active" src="img/logo.svg" alt="">
+                    <img class="svg active" src="img/logo.svg">
                     <div>
                         <div>
                             <span>Oleksiy Rusyuk</span>
@@ -94,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-                <img class="svg active" src="img/arrow-down.svg" alt="">
+                <img class="svg active" src="img/arrow-down.svg" id="hide-footer">
                 <a id="homeButton">Home</a>
                 <a id="aboutButton">About</a>
                 <a class="email">mr.me.alexey@gmail.com</a>
@@ -110,8 +133,6 @@
             </div>
         </div>
     </footer>
-
-
 
     <script src="js/bundle.js"></script>
 
