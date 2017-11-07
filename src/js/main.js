@@ -48,17 +48,32 @@ let createHighResContainer = (item) => {
 page.main.addEventListener('click',putToSlider);
 page.main.addEventListener('click',fullResView);
 
-
 function makeDraggable(item){
 	item.onmousedown = (e) => {
 		let moveAt = (e) => {
-			item.style.left = e.pageX - shiftX + 'px';
-			item.style.top = e.pageY - shiftY - 60 + 'px';
+			let rangeX = item.offsetParent.offsetWidth - item.offsetWidth; //avaliable range of offsetLeft
+			let currX = (e.pageX - shiftX); //curr offsetLeft;
+			if((page.html.clientWidth - item.offsetWidth) >= 0){
+				item.style.left = item.style.left; //don't move if img width < window width
+			}
+			if((rangeX < currX) && (currX < 0)){ //move if offset in avaliable range
+				item.style.left = e.pageX - shiftX + 'px';
+			}
+
+			let rangeY = item.offsetParent.offsetHeight - item.offsetHeight; //avaliable range of offsetTop
+			let currY = (e.pageY - shiftY - 60); //curr offsetTop; -60 cuz body padding 60px
+			if((page.html.clientHeight - item.offsetHeight) >= 0){
+				item.style.top = item.style.top; //don't move if img height < window height
+			}
+			if((rangeY < currY) && (currY < 0)){ //move if offset in avaliable range
+				item.style.top = e.pageY - shiftY - 60 + 'px'; // -60 cuz body padding 60px
+			}
 		}
 
+		//calculating distance between left/top img side and point in which we grab item
 		let coords = getCoords(item);
-  	let shiftX = e.pageX - coords.left;
-  	let shiftY = e.pageY - coords.top;
+  	let shiftX = e.pageX - coords.left; //X point of grab
+  	let shiftY = e.pageY - coords.top; //Y point of grab
 
 		item.style.position = 'absolute';
   	moveAt(e);
@@ -73,7 +88,7 @@ function makeDraggable(item){
 		}
 	}
 
-	item.ondragstart = () => (false);
+	item.ondragstart = () => (false); //disabling built-in drag
 
 	let getCoords = (elem) => {
 		let box = elem.getBoundingClientRect();
