@@ -26,6 +26,6 @@ items.slider = getEl("slider");
 items.hideFooter = getEl("hide-footer");
 items.footer = document.getElementsByTagName('footer')[0];
 items.backToGalleryViewButton = getEl('gallery-back-button');
-
+items.loadMore = getEl('loadMore');
 
 export default items;

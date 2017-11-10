@@ -4,6 +4,7 @@
 @gray:#606060;
 @darkgray:#131313;
 @lightgray:#1A1A1A;
+@goluboi_rapper:#03A9F4;
 
 body{
     padding: 60px 0;
@@ -133,7 +134,7 @@ header{
 .svg{
     cursor:pointer;
     &.active,&:hover{
-        fill:#03A9F4;
+        fill:@goluboi_rapper;
     }
 }
 
@@ -282,3 +283,20 @@ footer{
     }
 }
 
+#loadMore{
+    color:@goluboi_rapper;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+    border-top: 3rem solid transparent;
+    border-bottom: 3rem solid transparent;
+    img{
+        border-right: 1.6rem solid transparent;
+    }
+    & > div{
+        display: flex;
+        align-items:center;
+        cursor:pointer;
+    }
+}
