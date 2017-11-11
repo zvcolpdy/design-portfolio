@@ -3,7 +3,9 @@ import './footer'
 import './slider'
 import page from "./pageItems"
 import {put} from "./slider"
-import {load} from './imgLoad'
+import {load, loadMore} from './imgLoad'
+
+load();//loading images
 
 let scrollToTop = () => {
 	let stop  = setInterval(() => {
@@ -48,6 +50,7 @@ let createHighResContainer = (item) => {
 
 page.main.addEventListener('click',putToSlider);
 page.main.addEventListener('click',fullResView);
+page.loadMore.addEventListener('click',loadMore);
 
 function makeDraggable(item){
 	item.onmousedown = (e) => {
@@ -99,5 +102,3 @@ function makeDraggable(item){
 		};
 	}
 }
-
-load();
