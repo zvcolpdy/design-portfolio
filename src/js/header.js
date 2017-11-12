@@ -9,13 +9,16 @@ page.fullScrBtn.addEventListener('click', () => {
 
 //tile view
 page.toTileButton.addEventListener('click', () => {
+	let fullResContainer = document.getElementById('fullRes');
 	page.toTileButton.classList.add("active");
 	page.toRowButton.classList.remove("active");
 	page.backToGalleryViewButton.style.display = "none";
 	page.items.forEach((el) => {
 		el.className = 'tile';
 	})
-	page.body.removeChild(document.getElementById('fullRes'));
+	if(fullResContainer){
+		page.body.removeChild(fullResContainer);
+	}
 	page.fullScrBtn.classList.add("hidden-on-medium");
 	page.rowStuff.style.display = "none";
 	page.tileStuff.style.display = "flex";

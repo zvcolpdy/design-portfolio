@@ -3,11 +3,14 @@ import './footer'
 import './slider'
 import page from "./pageItems"
 import {put} from "./slider"
+import {load, loadMore} from './imgLoad'
+
+load();//loading images
 
 let scrollToTop = () => {
-		let stop  = setInterval(() => {
-			page.html.scrollTop == 0 ? clearInterval(stop) : page.html.scrollTop -= 35;
-		},10)
+	let stop  = setInterval(() => {
+		page.html.scrollTop == 0 ? clearInterval(stop) : page.html.scrollTop -= 35;
+	},10)
 }
 
 //delegation of *add to slider* event to "main" element
@@ -47,6 +50,7 @@ let createHighResContainer = (item) => {
 
 page.main.addEventListener('click',putToSlider);
 page.main.addEventListener('click',fullResView);
+page.loadMore.addEventListener('click',loadMore);
 
 function makeDraggable(item){
 	item.onmousedown = (e) => {
@@ -72,21 +76,21 @@ function makeDraggable(item){
 
 		//calculating distance between left/top img side and point in which we grab item
 		let coords = getCoords(item);
-  	let shiftX = e.pageX - coords.left; //X point of grab
-  	let shiftY = e.pageY - coords.top; //Y point of grab
+		let shiftX = e.pageX - coords.left; //X point of grab
+		let shiftY = e.pageY - coords.top; //Y point of grab
 
 		item.style.position = 'absolute';
-  	moveAt(e);
+		moveAt(e);
 
 		document.onmousemove = (e) => {
 			moveAt(e);
 		}
 
-		item.onmouseup = () => {
-			document.onmousemove = null;
-			item.onmouseup = null;
-		}
-	}
+  	item.onmouseup = () => {
+  		document.onmousemove = null;
+  		item.onmouseup = null;
+  	}
+  }
 
 	item.ondragstart = () => (false); //disabling built-in drag
 
