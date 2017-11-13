@@ -86,11 +86,11 @@ function makeDraggable(item){
 			moveAt(e);
 		}
 
-  	item.onmouseup = () => {
-  		document.onmousemove = null;
-  		item.onmouseup = null;
-  	}
-  }
+		item.onmouseup = () => {
+			document.onmousemove = null;
+			item.onmouseup = null;
+		}
+	}
 
 	item.ondragstart = () => (false); //disabling built-in drag
 
