@@ -52,15 +52,22 @@
 	justify-content: space-around;
 	color:@gray;
 	text-transform: uppercase;
+	&.visible{
+		display: flex;
+	}
 }
 .turn-phone{
-		color:#828282;
-		font-size:0.6875rem;
-		text-transform:uppercase;
-		margin:auto;
-		@media (min-width: 768px){
-			display:none !important;
-		}
+	color:#828282;
+	font-size:0.6875rem;
+	text-transform:uppercase;
+	margin:auto;
+	display: none;
+	&.visible{
+		display: flex;
+	}
+	@media (min-width: 768px){
+		display:none !important;
+	}
 }
 
 .slider-nav{
