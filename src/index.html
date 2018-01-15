@@ -7,94 +7,72 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Oleksiy Rusyuk</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
         <div class="wrapper">
-            <div>
-                <img class="svg view-1" src="img/type-1.svg" alt="" id="toTileButton">
-                <img class="svg view-2 active" src="img/type-2.svg" alt="" id="toRowButton">
+            <div class="gallery-type">
+                <img src="img/type-1.svg" id="toTileBtn">
+                <img class="active" src="img/type-2.svg" id="toRowBtn">
             </div>
-            <div class="turn-phone visible" id="row-stuff">
-                Turn phone horisontally for viewing in detail
-            </div>
-            <div id="tile-stuff">
-                <div>See thumbnails</div>
-                <div class="slider-nav">
-                    <div class="slider-nav-prev sliderPrev">
-                        <img src="img/arrow-left.svg" alt="">
-                        <div>previous</div>
-                    </div>
-                    <div class="slider-nav-next sliderNext">
-                        <div>next</div>
-                        <img src="img/arrow-right.svg" alt="">
-                    </div>
+            <div></div>
+            <div class="gallery-slider-nav" id="galleySliderNav">
+                <div id="slide-left">
+                    <img src="img/arrow-left.svg">
+                    <span>previous</span>
+                </div>
+                <div id="slide-right">
+                    <span>next</span>
+                    <img src="img/arrow-right.svg">
                 </div>
             </div>
-            <div id="gallery-back-button">
-                <img src="img/arrow-left.svg">
-                <span>Go to a gallery view</span>
-            </div>
-            <div id="fullscreen" class="hidden-on-medium">
+            <div class="fullscreen">
                 <span>fullscreen</span>
-                <img class="svg" src="img/fullscreen.svg">
+                <img src="img/fullscreen.svg" id="fullscreen">
             </div>
         </div>
     </header>
 
-    <div id="slider">
-        <img class="sliderPrev" src="img/slider-arrow-left.png" alt="">
-        <div class="wrapper" id="slider-content">
-            
-        </div>
-        <img class="sliderNext" src="img/slider-arrow-right.png" alt="">
-    </div>
-
     <div class="main" id="main">
-        <div class="wrapper tile-container" id="main-wrapper">
-            
-        </div>
-        <div id="loadMore">
-            <div>
-                <img src="img/load.png" />
-                <div>load more projects</div>
+        <div class="wrapper">
+            <div class="gallery-slider" id="gallerySlider">
+                <div class="gallery-wr">
+                    <div class="row"></div>
+                    <img class="nav arrow-left" id="prevBtn" src="img/slider-arrow-left.svg" alt="">
+                    <img class="nav arrow-right" id="nextBtn" src="img/slider-arrow-right.svg" alt="">
+                </div>
             </div>
-        </div>
-    </div>
-
-    <div id="about-container">
-        <div>
-            <h1>About</h1>
-            <p>I am Oleskiy Rusyuk, a 21 year old Ukrainian concept designer working on various videogame projects since 2014. I`ve created wide range of production art including concept art, matte-paint, promo art and a lot of advertisement materials.<br /><br /> Recent work includes action battle-royale Last Survivor over 40 very small game projects.<br /><br /> In current time i'm working on a rapid skill growth and devoting all my time into expanding my visual library and learning anatomy, mechanics and various useful knowledge.<br /><br /> In my free time I love to increase my efficiency by optimising my workspace and incorporating knowledge from new guides and tutorials from the top names in the industry. My art is hugely driven by the love of game-and-cinema industry. My aim is to acquire most knowledge possible to create completely lifelike solutions to any possible challenge.</p>
+            <div class="gallery row" id="gallery"></div>
+            <div class="load-more-btn" id="loadMoreBtn">
+                <img src="img/load.svg">
+                <span class="load">load more projects</span>
+                <span class="loading">loading...</span>
+            </div>
         </div>
     </div>
 
     <footer>
         <div class="wrapper">
-            <div class="footer-content-left">
-                <div class="name-container">
-                    <img class="svg active" src="img/logo.svg">
+            <div>
+                <div class="logo">
+                    <img class="svg" src="img/logo.svg">
                     <div>
-                        <div>
-                            <span>Oleksiy Rusyuk</span>
-                        </div>
-                        <div>
-                            <span>Concept designer</span>
-                        </div>
+                        <span>Oleksiy Rusyuk</span>
+                        <span>Concept designer</span>
                     </div>
                 </div>
-                <img class="svg active" src="img/arrow-down.svg" id="hide-footer">
-                <nav id="nav-bar">
-                    <a data-link="">Home</a>
-                    <a data-link="about">About</a>
+                <img class="hide-footer" src="img/arrow-down.svg">
+                <nav>
+                    <a href="/" class="active">Home</a>
+                    <a href="#">About</a>
                 </nav>
                 <a class="email">mr.me.alexey@gmail.com</a>
             </div>
-            <div class="footer-content-right">
-                <input class="contact-button" type="button" value="message me"/>
+            <div>
+                <div class="message">message me</div>
                 <div class="social-icons">
                     <img src="img/inst.svg" alt="">
                     <img src="img/linin.svg" alt="">
@@ -106,6 +84,5 @@
     </footer>
 
     <script src="js/bundle.js"></script>
-
 </body>
 </html>
