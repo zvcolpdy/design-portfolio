@@ -1,6 +1,6 @@
 <svg width="11" height="10" viewBox="0 0 11 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g transform="translate(-1176 -947)">
-<path transform="translate(1176 947)" fill-rule="evenodd" d="M 5.21053 0L 0 0L 0 10L 11 10L 11 5.55556L 5.21053 5.55556L 5.21053 0Z"/>
-<path transform="translate(1176 947)" d="M 8.10526 0.555556L 10.4211 0.555556L 10.4211 2.77778L 8.10526 2.77778L 8.10526 0.555556Z"/>
+<path transform="translate(1176 947)" fill="#03A9F4" fill-rule="evenodd" d="M 5.21053 0L 0 0L 0 10L 11 10L 11 5.55556L 5.21053 5.55556L 5.21053 0Z"/>
+<path transform="translate(1176 947)" fill="#03A9F4" d="M 8.10526 0.555556L 10.4211 0.555556L 10.4211 2.77778L 8.10526 2.77778L 8.10526 0.555556Z"/>
 </g>
 </svg>

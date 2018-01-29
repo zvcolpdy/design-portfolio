@@ -7,46 +7,86 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Oleksiy Rusyuk</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <div class="full-resolution" id="fullResolution"></div>
+
     <header>
         <div class="wrapper">
-            <div>
-                <img class="svg view-1" src="img/type-1.svg" alt="">
-                <img class="svg view-2 active" src="img/type-2.svg" alt="">
+            <div class="gallery-type">
+                <img class="active" src="img/type-2.svg" id="toRowBtn">
+                <img src="img/type-1.svg" id="toTileBtn">
             </div>
-            <div id="fullscreen">
+            <div></div>
+            <div class="gallery-slider-nav" id="galleySliderNav">
+                <div id="slide-left">
+                    <img src="img/arrow-left.svg">
+                    <span>previous</span>
+                </div>
+                <div id="slide-right">
+                    <span>next</span>
+                    <img src="img/arrow-right.svg">
+                </div>
+            </div>
+            <div class="fullscreen">
                 <span>fullscreen</span>
-                <img class="svg fullscreen" src="img/fullscreen.svg">
+                <img src="img/fullscreen.svg" id="fullscreen">
             </div>
         </div>
     </header>
 
-    <div class="main">
+    <div class="main" id="main">
         <div class="wrapper">
-            <div class="item">
-                <img src="img/img-1.png" alt="">
-                <p>Entering Cherkassy | Personal Project</p>
+            <div class="gallery-slider" id="gallerySlider">
+                <div class="gallery-wr">
+                    <div class="row"></div>
+                    <img class="nav arrow-left" id="prevBtn" src="img/slider-arrow-left.svg" alt="">
+                    <img class="nav arrow-right" id="nextBtn" src="img/slider-arrow-right.svg" alt="">
+                </div>
             </div>
-            <div class="item">
-                <img src="img/img-1.png" alt="">
-                <p>Entering Cherkassy | Personal Project</p>
-            </div>
-            <div class="item">
-                <img src="img/img-1.png" alt="">
-                <p>Entering Cherkassy | Personal Project</p>
+            <div class="gallery row" id="gallery"></div>
+            <div class="load-more-btn" id="loadMoreBtn">
+                <img src="img/load.svg">
+                <span class="load">load more projects</span>
+                <span class="loading">loading...</span>
             </div>
         </div>
     </div>
 
     <footer>
-
+        <div class="wrapper">
+            <div>
+                <div class="logo">
+                    <img class="svg" src="img/logo.svg">
+                    <div>
+                        <span>Oleksiy Rusyuk</span>
+                        <span>Concept designer</span>
+                    </div>
+                </div>
+                <img class="hide-footer" src="img/arrow-down.svg">
+                <nav>
+                    <a href="/" class="active">Home</a>
+                    <a href="#">About</a>
+                </nav>
+                <a class="email">mr.me.alexey@gmail.com</a>
+            </div>
+            <div>
+                <div class="message">message me</div>
+                <div class="social-icons">
+                    <img src="img/inst.svg" alt="">
+                    <img src="img/linin.svg" alt="">
+                    <img src="img/fb.svg" alt="">
+                    <img src="img/email.svg" alt="">
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
     <script src="js/bundle.js"></script>
-
 </body>
 </html>
