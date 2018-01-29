@@ -1,5 +1,6 @@
-import {getEl} from './helpers'
+import {getEl, smothScroll} from './helpers'
 import GallerySlider from './GallerySlider'
+import FullResolution from "./FullResolution";
 
 function itemIsParentNode(node){
     while (node !== null) {
@@ -12,8 +13,9 @@ function itemIsParentNode(node){
 }
 
 const Gallery = (function(){
-
     const $gallery = getEl('gallery');
+    let $scrolledElement = null;
+
     let currentStructureType = 'row';
 
     const setUpListeners = () => {
@@ -22,20 +24,49 @@ const Gallery = (function(){
 
     const init = () => {
         setUpListeners();
+        initScroll();
+
     };
 
+    const initScroll = () => {
+        const delay = 300;
+        let timeout = null;
+
+        let el = new SimpleBar(getEl('main'));
+        $scrolledElement = el.getScrollElement();
+        // el.recalculate()
+        $scrolledElement.addEventListener('scroll', (e) => {
+            $scrolledElement.classList.add("scrolled");
+            clearTimeout(timeout);
+            timeout = setTimeout(function(){
+                $scrolledElement.classList.remove("scrolled");
+            },delay);
+        });
+    }
+
     const itemClickEvent = (e) => {
+        let el = e.target,
+            highResAttr = el.getAttribute("high-res-url");
+
+        // highResolution open btn
+        if(highResAttr){
+            FullResolution.fillContainer(highResAttr)
+        }
+
+        // tile open gallery
         if(currentStructureType === 'tile'){
-            let itemNode = itemIsParentNode(e.target);
+            let itemNode = itemIsParentNode(el);
             if(itemNode){
                 let index = Array.prototype.slice.call($gallery.children).indexOf(itemNode)
-                GallerySlider.openSlider(index)
+                GallerySlider.openSlider(index);
+                smothScroll($scrolledElement, 0, 500);
             }
         }
     }
 
     const toggleStructure = (type) => {
         currentStructureType = type;
+        smothScroll($scrolledElement, 0, 0);
         if(type === 'tile'){
             $gallery.classList.add("tile");
         }else{

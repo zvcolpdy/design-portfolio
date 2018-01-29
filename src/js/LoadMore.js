@@ -19,7 +19,7 @@ const LoadMore = (function(){
         uploadImages();
     };
 
-    const createItemElement = (img, title) => {
+    const createItemElement = (img, title, highResUrl) => {
         let item = document.createElement("div"),
             textDiv = document.createElement("div"),
             name = document.createElement("div"),
@@ -29,6 +29,7 @@ const LoadMore = (function(){
 
         name.textContent = title;
         hightRes.textContent = "view highres";
+        hightRes.setAttribute("high-res-url", highResUrl);
         textDiv.appendChild(name);
         textDiv.appendChild(hightRes);
         item.appendChild(img);
@@ -54,7 +55,7 @@ const LoadMore = (function(){
                 let docFrag = document.createDocumentFragment();
 
                 for(let i = 0; i < imgs.length; i++){
-                    let item = createItemElement(imgs[i], art[lastImgLoaded+i]['title']);
+                    let item = createItemElement(imgs[i], art[lastImgLoaded+i]['title'], art[lastImgLoaded+i]['highres_url']);
                     docFrag.appendChild(item);
                 }
 

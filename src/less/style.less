@@ -3,6 +3,15 @@
 @blue: #03A9F4;
 @white: #FFF;
 
+.simplebar-scrollbar{
+    background-color: @gray;
+}
+
+.simplebar-scroll-content{
+    transform: translate3d(0, 0, 0);
+    -webkit-overflow-scrolling: touch;
+}
+
 ::-webkit-scrollbar-track {
     background-color: transparent;
 }
@@ -94,8 +103,13 @@ header{
     }
 
     .gallery-type{
-        svg:first-child{
-            margin-right: 12px;
+        svg{
+            &:first-child{
+                margin-right: 12px;
+            }
+            &.active{
+                pointer-events: none;
+            }
         }
     }
     .fullscreen{
@@ -156,21 +170,40 @@ header{
 
 /* END: HEADER */
 
+/* START: FULL_RESOLUTION */
+
+.full-resolution{
+    position: fixed;
+    height: ~'calc(100vh - 70px)';
+    width: 100%;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    img{
+        position: absolute;
+    }
+}
+
+/* END: FULL_RESOLUTION */
+
 /* START: MAIN */
 .main{
-    overflow-y: scroll;
-    overflow-x: hidden;
     margin: 70px 0;
-    //.wrapper{
-    //    padding: 0;
-    //    max-width: 1430px;
-    //}
+
+    .scrolled{
+        .item{
+            pointer-events: none;
+        }
+    }
+
     .gallery-slider{
         position: relative;
         height: 0;
-        transition: height 0.3s;
+        transition: height 0.3s, margin-bottom 0.3s;
+        max-height: 565px;
         &.opened{
-            max-height: 565px;
             height: ~'calc(100vh - 140px)';
             margin-bottom: 24px;
             .gallery-wr .nav{
@@ -353,6 +386,12 @@ header{
                 justify-content: space-between;
                 align-items: center;
                 text-transform: uppercase;
+                div:last-child{
+                    cursor: pointer;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
             }
             &:after{
                 content: '';

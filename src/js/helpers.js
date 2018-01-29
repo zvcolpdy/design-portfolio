@@ -1,4 +1,5 @@
 export const getEl = (id) => (document.getElementById(id));
+
 export function preloadImages(srcs) {
     function loadImage(src) {
         return new Promise(function(resolve, reject) {
@@ -95,7 +96,8 @@ export const art = [
     {
         title: "Entering Cherkassy | Personal Project",
         base_url: "../dist/img/base/48_05_30.jpg",
-        highres_url: "../dist/img/highres_base/48_05_30.png"
+        // highres_url: "../dist/img/highres_base/48_05_30.png"
+        highres_url: "../dist/img/highres_base/test-vert.png"
     },
     {
         title: "Entering Cherkassy | Personal Project",

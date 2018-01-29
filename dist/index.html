@@ -8,22 +8,25 @@
     <title>Oleksiy Rusyuk</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <div class="full-resolution" id="fullResolution"></div>
+
     <header>
         <div class="wrapper">
             <div class="gallery-type">
-                <svg id="toTileBtn" width="10" height="10" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
-<g transform="translate(783 63)">
-<path transform="translate(-783 -63)" d="M 0 4.44444L 4.44444 4.44444L 4.44444 0L 0 0L 0 4.44444ZM 0 10L 4.44444 10L 4.44444 5.55556L 0 5.55556L 0 10ZM 5.55556 10L 10 10L 10 5.55556L 5.55556 5.55556L 5.55556 10ZM 5.55556 0L 5.55556 4.44444L 10 4.44444L 10 0"/>
-</g>
-</svg>
-
                 <svg class="active" id="toRowBtn" width="13" height="10" viewBox="0 0 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
 <g transform="translate(762 63)">
 <path transform="translate(-762 -63)" d="M 3.82353 0L 3.82353 2.85714L 13 2.85714L 13 0L 3.82353 0ZM 3.82353 10L 13 10L 13 7.14286L 3.82353 7.14286L 3.82353 10ZM 3.82353 6.42857L 13 6.42857L 13 3.57143L 3.82353 3.57143L 3.82353 6.42857ZM 0 2.85714L 3.05882 2.85714L 3.05882 0L 0 0L 0 2.85714ZM 0 10L 3.05882 10L 3.05882 7.14286L 0 7.14286L 0 10ZM 0 6.42857L 3.05882 6.42857L 3.05882 3.57143L 0 3.57143L 0 6.42857Z"/>
+</g>
+</svg>
+
+                <svg id="toTileBtn" width="10" height="10" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+<g transform="translate(783 63)">
+<path transform="translate(-783 -63)" d="M 0 4.44444L 4.44444 4.44444L 4.44444 0L 0 0L 0 4.44444ZM 0 10L 4.44444 10L 4.44444 5.55556L 0 5.55556L 0 10ZM 5.55556 10L 10 10L 10 5.55556L 5.55556 5.55556L 5.55556 10ZM 5.55556 0L 5.55556 4.44444L 10 4.44444L 10 0"/>
 </g>
 </svg>
 
@@ -162,6 +165,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
     <script src="js/bundle.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-import {getEl, smothScroll} from './helpers'
+import {getEl} from './helpers'
 import Header from './Header'
 
 const GallerySlider = (function(){
@@ -48,7 +48,6 @@ const GallerySlider = (function(){
 
     const setCurrentSlide = () => {
         $sliderWrapper.style.marginLeft = 100*currentIndex*-1 + "%";
-        smothScroll(getEl('main'), 0, 300);
     };
 
     const next = () => {
