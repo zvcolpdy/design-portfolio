@@ -2,25 +2,25 @@ import {getEl, preloadImages, art} from './helpers'
 import Gallery from './Gallery'
 import GallerySlider from './GallerySlider'
 
-const LoadMore = (function(){
+var LoadMore = (function(){
 
-    const $loadMore = getEl('loadMoreBtn'),
+    var $loadMore = getEl('loadMoreBtn'),
         numberToUpload = 16;
 
-    let lastImgLoaded = 0,
+    var lastImgLoaded = 0,
         blockLoadMore = false;
 
-    const setUpListeners = () => {
+    var setUpListeners = function() {
         $loadMore.addEventListener('click', uploadImages)
     };
 
-    const init = () => {
+    var init = function() {
         setUpListeners();
         uploadImages();
     };
 
-    const createItemElement = (img, title, highResUrl) => {
-        let item = document.createElement("div"),
+    var createItemElement = function(img, title, highResUrl) {
+        var item = document.createElement("div"),
             textDiv = document.createElement("div"),
             name = document.createElement("div"),
             hightRes = document.createElement("div");
@@ -36,26 +36,26 @@ const LoadMore = (function(){
         item.appendChild(textDiv);
 
         return item
-    }
+    };
 
-    const uploadImages = () => {
+    var uploadImages = function() {
         if(!blockLoadMore){
             $loadMore.classList.add("locked");
             blockLoadMore = true;
 
-            let arrOfUrlsToLoad = []
+            var arrOfUrlsToLoad = [];
 
-            for(let i = 0; i < numberToUpload; i++){
+            for(var i = 0; i < numberToUpload; i++){
                 if(art[lastImgLoaded + i]){
                     arrOfUrlsToLoad.push(art[lastImgLoaded + i]['base_url'])
                 }
             }
 
-            preloadImages(arrOfUrlsToLoad).then((imgs) => {
-                let docFrag = document.createDocumentFragment();
+            preloadImages(arrOfUrlsToLoad).then(function(imgs) {
+                var docFrag = document.createDocumentFragment();
 
-                for(let i = 0; i < imgs.length; i++){
-                    let item = createItemElement(imgs[i], art[lastImgLoaded+i]['title'], art[lastImgLoaded+i]['highres_url']);
+                for(var i = 0; i < imgs.length; i++){
+                    var item = createItemElement(imgs[i], art[lastImgLoaded+i]['title'], art[lastImgLoaded+i]['highres_url']);
                     docFrag.appendChild(item);
                 }
 
@@ -70,13 +70,13 @@ const LoadMore = (function(){
                 }
 
                 $loadMore.classList.remove("locked");
-            }, (errImg) => {
+            }, function(errImg) {
                 alert("failed")
             });
         }
     };
 
     init();
-})()
+})();
 
 export default LoadMore

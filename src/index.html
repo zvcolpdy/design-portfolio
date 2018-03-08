@@ -8,12 +8,14 @@
     <title>Oleksiy Rusyuk</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@2.5.1/dist/simplebar.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <div class="full-resolution" id="fullResolution"></div>
+    <div class="full-resolution" id="fullResolution">
+        <span>loading...</span>
+    </div>
 
     <header>
         <div class="wrapper">
@@ -22,7 +24,8 @@
                 <img src="img/type-1.svg" id="toTileBtn">
             </div>
             <div></div>
-            <div class="gallery-slider-nav" id="galleySliderNav">
+            <div></div>
+            <div id="galleySliderNav">
                 <div id="slide-left">
                     <img src="img/arrow-left.svg">
                     <span>previous</span>
@@ -31,6 +34,10 @@
                     <span>next</span>
                     <img src="img/arrow-right.svg">
                 </div>
+            </div>
+            <div id="goBackToGallery">
+                <img src="img/arrow-left.svg">
+                <span>Go to a gallery view</span>
             </div>
             <div class="fullscreen">
                 <span>fullscreen</span>
@@ -57,7 +64,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer id="footer">
         <div class="wrapper">
             <div>
                 <div class="logo">
@@ -67,7 +74,7 @@
                         <span>Concept designer</span>
                     </div>
                 </div>
-                <img class="hide-footer" src="img/arrow-down.svg">
+                <img id="hideFooterBtn" class="hide-footer" src="img/arrow-down.svg">
                 <nav>
                     <a href="/" class="active">Home</a>
                     <a href="#">About</a>
@@ -86,7 +93,7 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
+    <script src="https://unpkg.com/simplebar@2.5.1/dist/simplebar.js"></script>
     <script src="js/bundle.js"></script>
 </body>
 </html>

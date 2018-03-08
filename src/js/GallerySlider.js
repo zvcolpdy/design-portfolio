@@ -1,39 +1,39 @@
 import {getEl} from './helpers'
 import Header from './Header'
 
-const GallerySlider = (function(){
-    const $slider = getEl('gallerySlider'),
+var GallerySlider = (function(){
+    var $slider = getEl('gallerySlider'),
           $sliderWrapper = $slider.children[0].children[0],
           $nextBtn = getEl('nextBtn'),
           $prevBtn = getEl('prevBtn');
-    let currentIndex = null;
-    let itemLength = null;
+    var currentIndex = null;
+    var itemLength = null;
 
-    const setUpListeners = () => {
+    var setUpListeners = function() {
         $nextBtn.addEventListener('click', next);
         $prevBtn.addEventListener('click', prev);
     };
 
-    const init = () => {
+    var init = function() {
         setUpListeners();
     };
 
-    const initSlider = () => {
+    var initSlider = function() {
         itemLength = $sliderWrapper.children.length;
 
         // styles
-        $sliderWrapper.style.width = 100*itemLength + "%"
-        Array.prototype.slice.call($sliderWrapper.children).forEach((el) => {
+        $sliderWrapper.style.width = 100*itemLength + "%";
+        Array.prototype.slice.call($sliderWrapper.children).forEach(function(el) {
             el.style.width = 100/itemLength + "%"
         })
     };
 
-    const appendItems = (itemsFragment) => {
+    var appendItems = function(itemsFragment) {
         $sliderWrapper.appendChild(itemsFragment);
         initSlider();
     };
 
-    const openSlider = (artIndex) => {
+    var openSlider = function(artIndex) {
         currentIndex = artIndex;
         setCurrentSlide();
 
@@ -41,16 +41,16 @@ const GallerySlider = (function(){
         $slider.classList.add("opened");
     };
 
-    const closeSlider = () => {
+    var closeSlider = function() {
         Header.closeSliderNav();
         $slider.classList.remove("opened");
     };
 
-    const setCurrentSlide = () => {
-        $sliderWrapper.style.marginLeft = 100*currentIndex*-1 + "%";
+    var setCurrentSlide = function() {
+        $sliderWrapper.style.transform = "translate3d(" + (100/itemLength)*currentIndex*-1 + "%" + ",0, 0)";
     };
 
-    const next = () => {
+    var next = function() {
         if(currentIndex < itemLength - 1)
             currentIndex++;
         else
@@ -59,7 +59,7 @@ const GallerySlider = (function(){
         setCurrentSlide();
     };
 
-    const prev = () => {
+    var prev = function() {
         if(currentIndex > 0)
             currentIndex--;
         else
@@ -71,12 +71,12 @@ const GallerySlider = (function(){
     init();
 
     return{
-        appendItems,
-        initSlider,
-        openSlider,
-        closeSlider,
-        prev,
-        next
+        appendItems: appendItems,
+        initSlider: initSlider,
+        openSlider: openSlider,
+        closeSlider: closeSlider,
+        prev: prev,
+        next: next
     }
 })();
 

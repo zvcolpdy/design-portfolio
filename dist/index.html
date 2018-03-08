@@ -8,12 +8,14 @@
     <title>Oleksiy Rusyuk</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@2.5.1/dist/simplebar.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <div class="full-resolution" id="fullResolution"></div>
+    <div class="full-resolution" id="fullResolution">
+        <span>loading...</span>
+    </div>
 
     <header>
         <div class="wrapper">
@@ -32,7 +34,8 @@
 
             </div>
             <div></div>
-            <div class="gallery-slider-nav" id="galleySliderNav">
+            <div></div>
+            <div id="galleySliderNav">
                 <div id="slide-left">
                     <svg width="7" height="12" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
     <g id="Canvas" transform="translate(-1978 -2301)">
@@ -53,6 +56,16 @@
 </svg>
 
                 </div>
+            </div>
+            <div id="goBackToGallery">
+                <svg width="7" height="12" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+    <g id="Canvas" transform="translate(-1978 -2301)">
+        <path transform="matrix(-0.707107 -0.707107 0.707107 -0.707107 1984 2313)" d="M 0 0.979072C 0 0.438345 0.438345 0 0.979072 0L 7.50622 0C 8.04694 0 8.48529 0.438346 8.48529 0.979072C 8.48529 1.5198 8.04694 1.95814 7.50622 1.95814L 0.979072 1.95814C 0.438345 1.95814 0 1.5198 0 0.979072Z"/>
+        <path transform="matrix(-0.707107 -0.707107 0.707107 -0.707107 1984 2313)"d="M 7.50622 0C 8.04694 0 8.48529 0.438346 8.48529 0.979072L 8.48529 7.50622C 8.48529 8.04694 8.04694 8.48529 7.50622 8.48529C 6.96549 8.48529 6.52714 8.04694 6.52714 7.50622L 6.52714 0.979072C 6.52714 0.438345 6.96549 3.31099e-17 7.50622 0Z"/>
+    </g>
+</svg>
+
+                <span>Go to a gallery view</span>
             </div>
             <div class="fullscreen">
                 <span>fullscreen</span>
@@ -104,7 +117,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer id="footer">
         <div class="wrapper">
             <div>
                 <div class="logo">
@@ -120,7 +133,7 @@
                         <span>Concept designer</span>
                     </div>
                 </div>
-                <svg class="hide-footer" width="12" height="7" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+                <svg id="hideFooterBtn" class="hide-footer" width="12" height="7" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
 <g transform="translate(-1359 -949)">
 <path fill="#03A9F4" transform="matrix(-0.707107 0.707107 -0.707107 -0.707107 1370.72 950)" d="M 7.45589 0C 7.91342 -2.80157e-17 8.28433 0.370902 8.28433 0.828432L 8.28433 7.45589C 8.28433 7.91342 7.91342 8.28433 7.45589 8.28433C 6.99836 8.28433 6.62746 7.91342 6.62746 7.45589L 6.62746 0.828432C 6.62746 0.370902 6.99836 2.80157e-17 7.45589 0Z"/>
 <path fill="#03A9F4" transform="matrix(-0.707107 0.707107 -0.707107 -0.707107 1370.72 950)" d="M 0 0.828432C 0 0.370902 0.370902 0 0.828432 0L 7.45589 0C 7.91342 -2.80157e-17 8.28433 0.370902 8.28433 0.828432C 8.28433 1.28596 7.91342 1.65687 7.45589 1.65687L 0.828432 1.65687C 0.370902 1.65687 0 1.28596 0 0.828432Z"/>
@@ -165,7 +178,7 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
+    <script src="https://unpkg.com/simplebar@2.5.1/dist/simplebar.js"></script>
     <script src="js/bundle.js"></script>
 </body>
 </html>

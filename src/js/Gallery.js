@@ -1,4 +1,4 @@
-import {getEl, smothScroll} from './helpers'
+import {getEl, smothScroll, debounce} from './helpers'
 import GallerySlider from './GallerySlider'
 import FullResolution from "./FullResolution";
 
@@ -12,59 +12,58 @@ function itemIsParentNode(node){
     return false;
 }
 
-const Gallery = (function(){
-    const $gallery = getEl('gallery');
-    let $scrolledElement = null;
+var Gallery = (function(){
+    var $gallery = getEl('gallery'),
+          $main = getEl('main');
+    var simpleBarObject = new SimpleBar($main);
+    var $scrolledElement = null;
 
-    let currentStructureType = 'row';
+    var currentStructureType = 'row';
 
-    const setUpListeners = () => {
+    var setUpListeners = function() {
         $gallery.addEventListener('click', itemClickEvent)
     };
 
-    const init = () => {
+    var init = function() {
         setUpListeners();
         initScroll();
-
     };
 
-    const initScroll = () => {
-        const delay = 300;
-        let timeout = null;
+    var initScroll = function() {
+        var debouncedRemoveClassFn = debounce(function(){
+            $scrolledElement.classList.remove("scrolled");
+        }, 300);
 
-        let el = new SimpleBar(getEl('main'));
-        $scrolledElement = el.getScrollElement();
-        // el.recalculate()
-        $scrolledElement.addEventListener('scroll', (e) => {
-            $scrolledElement.classList.add("scrolled");
-            clearTimeout(timeout);
-            timeout = setTimeout(function(){
-                $scrolledElement.classList.remove("scrolled");
-            },delay);
+        $scrolledElement = simpleBarObject.getScrollElement();
+        $scrolledElement.addEventListener('scroll', function() {
+            if(!$scrolledElement.classList.contains("scrolled")){
+                $scrolledElement.classList.add("scrolled");
+            }
+            debouncedRemoveClassFn();
         });
-    }
+    };
 
-    const itemClickEvent = (e) => {
-        let el = e.target,
+    var itemClickEvent = function(e) {
+        var el = e.target,
             highResAttr = el.getAttribute("high-res-url");
 
         // highResolution open btn
         if(highResAttr){
-            FullResolution.fillContainer(highResAttr)
+            FullResolution.openModule(highResAttr);
         }
 
         // tile open gallery
         if(currentStructureType === 'tile'){
-            let itemNode = itemIsParentNode(el);
+            var itemNode = itemIsParentNode(el);
             if(itemNode){
-                let index = Array.prototype.slice.call($gallery.children).indexOf(itemNode)
+                var index = Array.prototype.slice.call($gallery.children).indexOf(itemNode);
                 GallerySlider.openSlider(index);
                 smothScroll($scrolledElement, 0, 500);
             }
         }
-    }
+    };
 
-    const toggleStructure = (type) => {
+    var toggleStructure = function(type) {
         currentStructureType = type;
         smothScroll($scrolledElement, 0, 0);
         if(type === 'tile'){
@@ -74,15 +73,24 @@ const Gallery = (function(){
         }
     };
 
-    const appendItems = (docFrag) => {
+    var appendItems = function(docFrag) {
         $gallery.appendChild(docFrag);
-    }
+    };
+
+    var resizeToFooterChanges = function(type) {
+        if(type === 'hide'){
+            $main.classList.add("full-size");
+        }else{
+            $main.classList.remove("full-size");
+        }
+    };
 
     init();
 
     return {
-        toggleStructure,
-        appendItems
+        toggleStructure: toggleStructure,
+        appendItems: appendItems,
+        resizeToFooterChanges: resizeToFooterChanges
     }
 })()
 
