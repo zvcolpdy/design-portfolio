@@ -115,134 +115,123 @@ export function smothScroll(element, target, duration) {
 export var art = [
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/48_05_30.jpg",
-        // highres_url: "img/highres_base/48_05_30.png"
-        highres_url: "img/highres_base/test-vert.png"
+        base_url: "img_opt/base/48_05_30.jpg",
+        highres_url: "img_opt/highres_base/48_05_30.png"
+        // highres_url: "img_opt/highres_base/test-vert.png"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/48_06_03_04.jpg",
-        // highres_url: "img/highres_base/48_06_03_04.png"
-        highres_url: "img/highres_base/test_small_img.jpg"
+        base_url: "img_opt/base/48_06_03_04.jpg",
+        highres_url: "img_opt/highres_base/48_06_03_04.png"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/48_06_04_9_1.jpg",
-        highres_url: "img/highres_base/48_06_04_9_1.png"
+        base_url: "img_opt/base/48_06_04_9_1.jpg",
+        highres_url: "img_opt/highres_base/48_06_04_9_1.png"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/49_03_00.jpg",
-        highres_url: "img/highres_base/49_03_00.png"
+        base_url: "img_opt/base/49_03_00.jpg",
+        highres_url: "img_opt/highres_base/49_03_00.png"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/49_08.jpg",
-        highres_url: "img/highres_base/49_08.jpg"
+        base_url: "img_opt/base/49_08.jpg",
+        highres_url: "img_opt/highres_base/49_08.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/49_17.jpg",
-        highres_url: "img/highres_base/49_17.jpg"
+        base_url: "img_opt/base/49_17.jpg",
+        highres_url: "img_opt/highres_base/49_17.png"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/alexey-rusyuk-a7f0b7bdd2.jpg",
-        highres_url: "img/highres_base/alexey-rusyuk-a7f0b7bdd2.jpg"
+        base_url: "img_opt/base/alexey-rusyuk-a7f0b7bdd2.jpg",
+        highres_url: "img_opt/highres_base/alexey-rusyuk-a7f0b7bdd2.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/Clipboard01.jpg",
-        highres_url: "img/highres_base/Clipboard01.jpg"
+        base_url: "img_opt/base/Clipboard01.jpg",
+        highres_url: "img_opt/highres_base/Clipboard01.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/Clipboard03.jpg",
-        highres_url: "img/highres_base/Clipboard01.jpg"
+        base_url: "img_opt/base/Clipboard04.jpg",
+        highres_url: "img_opt/highres_base/Clipboard04.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/Clipboard04.jpg",
-        highres_url: "img/highres_base/Clipboard01.jpg"
+        base_url: "img_opt/base/oleksiy-rusyuk-005-1.jpg",
+        highres_url: "img_opt/highres_base/oleksiy-rusyuk-005-1.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-005-1.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-005-1.jpg"
+        base_url: "img_opt/base/oleksiy-rusyuk-007-2.jpg",
+        highres_url: "img_opt/highres_base/oleksiy-rusyuk-007-2.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-007-2.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-007-2.jpg"
+        base_url: "img_opt/base/oleksiy-rusyuk-008-2-p.jpg",
+        highres_url: "img_opt/highres_base/oleksiy-rusyuk-008-2-p.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-008-2-p.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-008-2-p.jpg"
+        base_url: "img_opt/base/oleksiy-rusyuk-008-4-2-p.jpg",
+        highres_url: "img_opt/highres_base/oleksiy-rusyuk-008-4-2-p.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-008-4-2-p.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-008-4-2-p.jpg"
+        base_url: "img_opt/base/oleksiy-rusyuk-008-p.jpg",
+        highres_url: "img_opt/highres_base/oleksiy-rusyuk-008-p.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-008-p.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-008-p.jpg"
+        base_url: "img_opt/base/oleksiy-rusyuk-010-2-p.jpg",
+        highres_url: "img_opt/highres_base/oleksiy-rusyuk-010-2-p.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-010-2-p.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-010-2-p.jpg"
+        base_url: "img_opt/base/oleksiy-rusyuk-010-p.jpg",
+        highres_url: "img_opt/highres_base/oleksiy-rusyuk-010-p.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-010-p.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-010-p.jpg"
+        base_url: "img_opt/base/oleksiy-rusyuk-49-0.jpg",
+        highres_url: "img_opt/highres_base/oleksiy-rusyuk-49-0.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-48-05-34.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-48-05-34.jpg"
+        base_url: "img_opt/base/oleksiy-rusyuk-headquarters.jpg",
+        highres_url: "img_opt/highres_base/oleksiy-rusyuk-headquarters.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-49-0.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-49-0.jpg"
+        base_url: "img_opt/base/oleksiy-rusyuk-palatka-04interior.jpg",
+        highres_url: "img_opt/highres_base/oleksiy-rusyuk-palatka-04interior.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-headquarters.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-headquarters.jpg"
+        base_url: "img_opt/base/oleksiy-rusyuk-palatka-5.jpg",
+        highres_url: "img_opt/highres_base/oleksiy-rusyuk-palatka-5.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-palatka-04interior.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-palatka-04interior.jpg"
+        base_url: "img_opt/base/oleksiy-rusyuk-rhe-03.jpg",
+        highres_url: "img_opt/highres_base/oleksiy-rusyuk-rhe-03.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-palatka-5.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-palatka-5.jpg"
+        base_url: "img_opt/base/oleksiy-rusyuk-vishka-building.jpg",
+        highres_url: "img_opt/highres_base/oleksiy-rusyuk-vishka-building.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-rhe-03.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-rhe-03.jpg"
+        base_url: "img_opt/base/oleksiy-rusyuk-vorota-02.jpg",
+        highres_url: "img_opt/highres_base/oleksiy-rusyuk-vorota-02.jpg"
     },
     {
         title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-vishka-building.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-vishka-building.jpg"
-    },
-    {
-        title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/oleksiy-rusyuk-vorota-02.jpg",
-        highres_url: "img/highres_base/oleksiy-rusyuk-vorota-02.jpg"
-    },
-    {
-        title: "Entering Cherkassy | Personal Project",
-        base_url: "img/base/Post_sketch.3b.jpg",
-        highres_url: "img/highres_base/Post_sketch.3b.jpg"
+        base_url: "img_opt/base/Post_sketch.3b.jpg",
+        highres_url: "img_opt/highres_base/Post_sketch.3b.jpg"
     }
 ];

@@ -5,7 +5,7 @@ import GallerySlider from './GallerySlider'
 var LoadMore = (function(){
 
     var $loadMore = getEl('loadMoreBtn'),
-        numberToUpload = 16;
+        numberToUpload = 8;
 
     var lastImgLoaded = 0,
         blockLoadMore = false;
